@@ -1,0 +1,1355 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="app">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+
+    <meta name="title" content="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya | Sharing Happiness">
+    <meta name="keywords" content="Hadirkan,Mobil,Juara,Untuk,Anak-anak,Di,Desa,Berdaya,rumahzakat,sharinghappiness,donasi,donatur,kampanye,social crowdfunding">
+    <meta name="description" content="Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di da">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=1200, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+    <meta name="format-detection" content="telephone=no">
+
+    <meta property="og:url" content="https://sharinghappiness.org/hadirkanmobiljuara" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya | Sharing Happiness">
+    <meta property="og:title" content="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya | Sharing Happiness" />
+    <meta property="og:description" content="Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di da" />
+    <meta property="og:image" content="https://sharinghappiness.org/files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332_thumbnail256x256.jpg" />
+    <meta property="og:image:secure_url" content="https://sharinghappiness.org/files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332_thumbnail256x256.jpg" />
+    <meta property="fb:app_id" content="159117084768115">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://sharinghappiness.org/hadirkanmobiljuara">
+    <meta name="twitter:title" content="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya | Sharing Happiness">
+    <meta name="twitter:description" content="Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di da">
+    <meta name="twitter:image" content="https://sharinghappiness.org/files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332_thumbnail256x256.jpg">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+    <title>Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya | Sharing Happiness</title>
+
+    <link rel="stylesheet" href="assets/css/mainbb80.css?v=30">
+    <style>
+        .alert-box.alert-box-warning {
+            background: #eea072;
+        }
+
+        .alert-box {
+            z-index: 5;
+        }
+        
+        .program-history.program-history--white .program-history-img {
+            background: transparent;
+        }
+
+        .payment-method-footer-logo {
+            float: left; 
+            height: 16px; 
+            margin-right: 6px; 
+            margin-bottom: 6px; 
+            -webkit-filter: grayscale(1); 
+            filter: grayscale(1);
+        }
+
+        .info-minimum {
+            padding: 10px;
+            background-color: #fdc286;
+            margin: 10px 0px;
+            color: #555555;
+        }
+
+        .info-minimum p {
+            margin: 0px;
+            font-weight: 500;
+        }
+    </style>
+        <style>
+        #wishlist, #wishlist-desk {
+            cursor: pointer;
+        }
+
+        .info-minimum {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .info-text {
+            margin: 0px;
+        }
+
+        img.donatur-image {
+            width: 40px !important;
+            height: 40px !important;
+        }
+
+        @media  screen and (min-width: 48em) {
+            .product-card.product-card--bottom {
+                z-index: 0;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="sticky-footer-container">
+        <div class="sticky-footer-container-item">
+            <header class="site-header adaptive-header">
+    <div class="container relative">
+        <div class="site-navs">
+            <a href="#" class="site-nav-mobile-icon">
+                <span class="fa fa-fw fa-bars"></span>
+            </a>
+
+                        <a class="site-header-logo" href="index.html">
+                <img src="assets/img/logo.png" alt="" class="logo-js is-active">
+                <img src="assets/img/logo-white.png" alt="" class="logo-white-js">
+                <span class="sr-only">Sharing Happiness by Rumah Zakat</span>
+            </a>
+            
+            <ul class="site-nav list-nostyle">
+                                <li class="site-nav-item">
+                    <a class="site-nav-anchor" href="program.html">Program</a>
+                                                        </li>
+                                <li class="site-nav-item">
+                    <a class="site-nav-anchor" href="sedekah.html">Sedekah</a>
+                                                                <ul class="site-nav-child list-nostyle">
+                                                        <li class="site-nav-child-item">
+                                <a href="zakat.html" class="site-nav-anchor-child">Zakat</a>
+                                                                                                <ul class="list-nostyle site-nav-subchild-list">
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/detail/zakat-penghasilan.html" class="site-nav-anchor-subchild">Zakat Penghasilan</a>
+                                    </li>
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/detail/zakat-perdagangan.html" class="site-nav-anchor-subchild">Zakat Perdagangan</a>
+                                    </li>
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/detail/zakat-emas.html" class="site-nav-anchor-subchild">Zakat Emas</a>
+                                    </li>
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/detail/zakat-tabungan.html" class="site-nav-anchor-subchild">Zakat Simpanan</a>
+                                    </li>
+                                                                    </ul>
+                                                                <button class="fa fa-angle-down has-subchild-js"></button>    
+                            </li>
+                                                        <li class="site-nav-child-item">
+                                <a href="sedekah/show/fidyah.html" class="site-nav-anchor-child">Fidyah</a>
+                                                                                                <button class="fa fa-angle-down has-subchild-js"></button>    
+                            </li>
+                                                        <li class="site-nav-child-item">
+                                <a href="infaq.html" class="site-nav-anchor-child">Infaq</a>
+                                                                                                <ul class="list-nostyle site-nav-subchild-list">
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/show/mari-berinfaq.html" class="site-nav-anchor-subchild">Mari Berinfaq</a>
+                                    </li>
+                                                                        <li class="site-nav-subchild-item">
+                                        <a href="sedekah/show/icard.html" class="site-nav-anchor-subchild">iCard</a>
+                                    </li>
+                                                                    </ul>
+                                                                <button class="fa fa-angle-down has-subchild-js"></button>    
+                            </li>
+                                                        <li class="site-nav-child-item">
+                                <a href="wakaf.html" class="site-nav-anchor-child">Wakaf</a>
+                                                                                                <button class="fa fa-angle-down has-subchild-js"></button>    
+                            </li>
+                                                    </ul>
+                        <button class="fa fa-angle-down has-child-js"></button>
+                                    </li>
+                                <li class="site-nav-item">
+                    <a class="site-nav-anchor" href="ramadhan.html">Ramadhan</a>
+                                                        </li>
+                                <li class="site-nav-item">
+                    <a class="site-nav-anchor" href="superqurban.html">SuperQurban</a>
+                                                        </li>
+                
+                <li class="site-nav-item site-nav-mobile">
+                    <a class="site-nav-anchor color-active" href="member/login.html">Galang dana</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="site-navs-support">
+            <a class="btn btn--small btn--primary site-nav-desktop" href="member/login.html">Galang dana</a>
+            <a class="site-navs-support-anchor no-border site-nav-search-js" href="#">
+                <span class="fa fa-fw fa-search"></span>
+            </a>
+                                    <span><a href="member/login.html">Masuk</a> atau <a href="member/register.html">Daftar</a></span>
+                        <div class="site-nav-fly-anchor site-nav-fly-anchor--notification notification-anchor-js">
+                <div class="site-nav-notification-anchor-intro">
+                    <span><small>Pemberitahuan</small></span>
+                    <div class="site-nav-notification-tab-container">
+                        <a href="#cart-list" class="site-nav-notification-tab">
+                            <span class="fa fa-fw fa-shopping-cart"></span>
+                        </a>
+                        <a href="#notification-list" class="site-nav-notification-tab">
+                            <span class="fa fa-fw fa-bell-o"></span>
+                        </a>
+                        <a href="#wish-list" class="site-nav-notification-tab">
+                            <span class="fa fa-fw fa-heart-o"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="notification-tab-js" id="cart-list">
+                    <ul class="site-nav-notification-anchor-menu list-nostyle">
+                                            <li style="padding: 10px 20px;text-align: center; border-top: 1px solid #dddddd;"><a href="transaction/cart/list.html">Lihat semua</a></li>
+                    </ul>
+                </div>
+                <div class="notification-tab-js is-active" id="notification-list">
+                    <ul class="site-nav-notification-anchor-menu list-nostyle">
+                                                                <li style="padding: 10px 20px;text-align: center; border-top: 1px solid #dddddd;"><a href="member/login.html">Lihat Semuanya</a></li>   
+                    </ul>
+                </div>
+                <div class="notification-tab-js" id="wish-list">
+                    <ul class="site-nav-notification-anchor-menu list-nostyle">
+                                            <li style="padding: 10px 20px;text-align: center; border-top: 1px solid #dddddd;"><a href="member/login.html">Lihat semua</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-search-container">
+            <div class="header-search-input">
+                <input type="text" id="search-program" class="form-input form-input--block">
+            </div>
+            <div class="header-search-close">
+                <a href="#" class="search-close-js">
+                    <span class="fa fa-fw fa-close"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>        </div>
+        <div class="sticky-footer-container-item --pushed">
+                <main class="site-main site-main--pushed program-controller" ng-controller="programController">
+
+        <section class="home-section home-section--white home-section--no-icon home-section--no-bottom-padding --no-border">
+            <div class="container">
+                <div class="container-split">
+                    <div class="container-split-content container-split-content--fixed">
+                        <div class="block">
+                                                    <div class="slick-photo-main block-half">
+                                                            <div><img src="files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332_thumbnail_x480.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - 629"></div>
+                                                            <div><img src="files/programgalleries/daf183c2708f6bd3b233240a21516ecf-20180525061359_thumbnail_x480.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - 629"></div>
+                                                            <div><img src="files/programgalleries/e5715aadd79dbb8ab5ffffc91c54172d-20180525062223_thumbnail_x480.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - 629"></div>
+                                                        </div>
+                            <div class="slick-photo-list">
+                                                            <div><img src="files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - Thumbnail 629"></div>
+                                                            <div><img src="files/programgalleries/daf183c2708f6bd3b233240a21516ecf-20180525061359.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - Thumbnail 629"></div>
+                                                            <div><img src="files/programgalleries/e5715aadd79dbb8ab5ffffc91c54172d-20180525062223.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya - Thumbnail 629"></div>
+                                                        </div>
+                                                </div>
+                    </div>
+                    <div class="container-split-content product-card-js">
+                        <div class="product-card product-card--top">
+                            <div class="product-card-section">
+                                <h2>Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya</h2>
+                                <p>Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di da</p>
+                                                                <div class="card-media media">
+                                    <div class="media-figure media-figure--verified">
+                                        <img class="circle" src="files/userprofilepictures/4aad52c2dd60355b937bb744f2edecd9-20180419020057-rumah-zakat-solo_thumbnail72x72.jpg" width="35" alt="">
+                                    </div>
+                                    <div class="media-content">
+                                        <span>Rumah Zakat Solo</span>
+                                        <div>
+                                            <span class="fa fa-star text-orange"></span>
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                    <div class="media-location">
+                                        <span>Solo, Solo</span>
+                                    </div>
+                                </div>
+                                                            </div>
+                            <div class="product-card-section">
+                                <div class="flexbox block-half">
+                                    <div class="text-orange text-big text-bold block-quarter">Rp. 100.000
+                                        <span class="text-small color-black"><i class="fa fa-fw fa-user-circle"></i>1 Donatur</span>
+                                    </div>
+                                                                        <div class="meter">
+                                        <div class="meter-bar" data-meter="1"></div>
+                                    </div>
+                                                                        <div class="v-center v-center--spread">
+                                                                                <span class=""><small>1% dari Rp. 15.250.000</small></span>
+                                                                                <span class=""><small><i class="fa fa-fw fa-clock-o"></i>3 Hari</small></span>
+                                    </div>
+                                </div>
+                                <div class="block-quarter product-card-socmed">
+                                    <a href="#" class="btn btn--primary popup-program-open-js" id="donation-button-trigger">Berbagi sekarang</a>
+                                    <a href="program/like/hadirkanmobiljuara.html" data-token="GCendoilzoBHHoJlvqUCAJZgqohsiSPeJGRcwZHX" class="" id="wishlist"><span class="fa fa-fw fa-heart-o" id="like"></span></a>
+                                    <div class="socmed-container">
+                                        <a href="https://www.facebook.com/sharer.php?u=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-facebook"></span></a>
+                                        <a href="https://twitter.com/home?status=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-twitter"></span></a>
+                                        <a href="whatsapp://send?text=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-whatsapp"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card-section">
+                                                                <small class="block-half">Bantu program ini dengan menjadi Pembagi kebaikan</small>
+                                <div class="block-quarter">
+                                    <a href="member/login.html" class="btn btn--block btn--tosca">Jadi pembagi kebaikan</a>
+                                </div>
+                                                                <small class="block-half"><span>Program ini mencurigakan?</span> <a href="member/login.html">Laporkan</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-nostyle list-inline program-submenu">
+                    <li class="program-submenu-item"><a href="#detail" class="tab-anchor-js is-active">Detail</a></li>
+                    <li class="program-submenu-item"><a href="#info" class="tab-anchor-js">Info Terbaru</a></li>
+                    <li class="program-submenu-item"><a href="#donatur" class="tab-anchor-js">Donatur</a></li>
+                                            <li class="program-submenu-item"><a href="#sharer" class="tab-anchor-js">Pembagi Kebaikan</a></li>
+                                        <li class="program-submenu-item"><a href="#pesan" class="tab-anchor-js">Pesan</a></li>
+                                    </ul>
+            </div>
+        </section>
+
+        <section class="home-section home-section--grey home-section--no-icon home-section--small-padding">
+            <div class="container">
+                <div class="container-split" style="min-height: 600px;">
+                    <div class="container-split-content">
+                        <!-- detail -->
+                        <div class="program-section-container program-section-container--white tab-content-js clearfix is-active" id="detail">
+                                                    <p>Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di dalamnya dilengkapi audio visual serta komputer yang terhubung ke internet.</p>
+
+<p style="text-align: center;"><img alt="" src="files/raw/58dm1.jpg" style="width: 400px; height: 266px;" /></p>
+
+<p>Mobil Juara ini kami hadirkan di area wilayah Solo raya karena terlihat masih minimnya fasilitas dan kualitas pendidikan disana. sampai saat ini dengan hadirnya Mobil Juara, kami telah melayani lebih dari 1000 Penerima Manfaat dari 20 titik lokasi setiap bulannya. Kami rasa efektif untuk membantu meningkatkan pendidikan khususnya dalam hal membaca di wilayah sekitar Solo khususnya di wilayah pinggiran.</p>
+
+<p style="text-align: center;"><img alt="" src="files/raw/6a41m.jpg" style="width: 400px; height: 266px;" /></p>
+
+<p>Untuk Program Mobil Juara ini kami membutuhkan anggaran dana sekitar Rp 15.250.000,- kebutuhannya meliputi buku bacaan, rak buku, permainan edukatif, ketrampilan, storytelling, film edukatif &amp; internet, games dan juga perlombaan. Dengan sedikit dukungan dari kita maka akan sangat berarti bagi mereka, semakin baiknya program Gerakan Membaca Mobil Juara maka akan semakin banyak anak-anak yang terbantu untuk membuka cakrawala lewat buku dan pendidikan.</p>
+
+<p>Salah satu sekolah yang pernah dikunjungi oleh Mobil juara Solo adalah SDN 06 Sukoharjo dimana merupakan sekolah yang bisa dikatakan sederhana yang terletak di pedesaan di tengah sawah. Muridnya pun hanya mencapai 60 siswa, dani salah satu siswa kelas 06 mengungkapkan bagaimana ia senang dengan hadirnya Mobil Juara ke sekolahnya.</p>
+
+<p style="text-align: center;"><img alt="" src="files/raw/6lrc0.jpg" style="width: 400px; height: 300px;" /></p>
+
+<p>&quot;Asyik sekali sekolah hari ini kedatangan Mobil Juara, jadi bisa baca buku yang banyak, permainannya juga seru, hadiahnya juga banyak, terimakasih Rumah Zakat&quot;, ujar Dani.</p>
+
+<p>Mari kita dukung Gerakan Membaca Mobil Juara bagi anak-anak di desa, semoga Allat SWT senantiasa memudahkan urusan kita semua ketika kita sudah bisa membantu mewujudkan mimpi anak-anak Indonesia dengan membaca.</p>
+                                                    <div class="program-hashtag">
+                                                        </div>
+                        </div>
+
+                        <!-- program update -->
+                        <div class="program-section-container program-section-container--transparent  tab-content-js" id="info">
+                                                    <ul class="list-nostyle program-history program-history--white">
+                                                            <li class="program-history-item">
+                                    <div class="program-history-text">
+                                        <span>Update Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya</span>
+                                        <p><p>... belum ada update penyaluran ...</p></p>
+                                    </div>
+                                    <div class="program-history-img">
+                                                                                <img src="files/userprofilepictures/4aad52c2dd60355b937bb744f2edecd9-20180419020057-rumah-zakat-solo_thumbnail72x72.jpg" alt="">
+                                                                                <span>88 Hari yang lalu</span>
+                                    </div>
+                                </li>
+                                                        </ul>
+                                                </div>
+
+                        <!-- donatur-list -->
+                        <div class="program-section-container tab-content-js" id="donatur">
+                                                    <ul class="list-nostyle program-donatur-list donatur-list-js" data-donatur="program/donatur/listc9b4.json?program=hadirkanmobiljuara&amp;page=">
+                                <li class="program-donatur-item" dir-paginate="donatur in dataDonatur | itemsPerPage: limit" total-items="totalUsers">
+                                    <div class="program-donatur-person">
+                                        <div class="program-donatur-img">
+                                            <img ng-src="{{donatur.donaturImg}}" alt="donatur-image" class="donatur-image">
+                                        </div>
+                                        <div class="program-donatur-intro">
+                                            <span class="program-donatur-name" ng-bind="donatur.donaturName"></span>
+                                            <time class="program-donatur-date" ng-bind="donatur.donateDate"></time>
+                                            <p class="program-donatur-description" ng-bind="donatur.donaturDesc"></p>
+                                        </div>
+                                    </div>
+                                    <div class="program-donatur-total">
+                                        <span ng-bind="'Rp '+donatur.donationTotal"></span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="pagination-container">
+                                
+                                <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>    
+                            </div>
+                            <div class="loader-box" ng-class="{'is-active' : loading}">
+                                <div class="loader-container">
+                                    <img src="assets/img/ajax-loader.gif" alt="">
+                                </div>
+                            </div>
+                                                </div>
+
+                        
+                                                    <!-- re-campaigner -->
+                            <div class="program-section-container tab-content-js" id="sharer">
+                                                                    <center>
+                                        <br><br>
+                                        ( <i>belum ada pembagi kebaikan untuk program ini</i> )
+                                        <br><br>
+                                        <a href="member/login.html" class="btn btn--tosca">Jadi Pembagi Kebaikan</a>
+                                        <br><br>
+                                    </center>
+                                                            </div>
+                        
+                        <!-- message -->
+                        <div class="program-section-container tab-content-js" id="pesan">
+                            <h3 class="program-section-title">Pesan kamu akan langsung terkirim ke <b>Rumah Zakat Solo</b></h3>
+                            <form method="POST" action="https://sharinghappiness.org/program/message/hadirkanmobiljuara" accept-charset="UTF-8" id="message-form"><input name="_token" type="hidden" value="GCendoilzoBHHoJlvqUCAJZgqohsiSPeJGRcwZHX">
+                                                                <div class="form__row">
+                                    <label for="sender_fullname" class="form-label">Nama Lengkap</label>
+                                    <input type="text" name="sender_fullname" id="sender_fullname" value="" class="form-input form-input--block" required>
+                                </div>
+                                <div class="form__row">
+                                    <label for="sender_email" class="form-label">Email</label>
+                                    <input type="email" name="sender_email" id="sender_email" value="" class="form-input form-input--block" required>
+                                </div>
+                                <div class="form__row">
+                                    <label for="subject" class="form-label">Perihal</label>
+                                    <input type="text" name="subject" id="subject" class="form-input form-input--block" required>
+                                </div>
+                                <div class="form__row">
+                                    <label for="content" class="form-label">Tuliskan Pesan Anda</label>
+                                    <textarea name="" name="content" id="content" cols="30" rows="10" class="form-input form-input--block" required></textarea>
+                                </div>
+                                <button class="btn btn--primary btn--block">Kirim Pesan</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container-split-content">
+                        <div class="product-card product-card--bottom">
+                            <div class="product-card-section">
+                                <h2>Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya</h2>
+                                <p>Mobil Juara merupakan program pengadaan media pembelajaran berupa kendaraan yang didesain untuk bisa mobile dan menghadirkan nuansa pembelajaran yang atraktif. Mobil Juara ini menggunakan fasilitas yang lebih modern dan atraktif disediakan buku-buku di da</p>
+                                                                <div class="card-media media">
+                                    <div class="media-figure media-figure--verified">
+                                        <img class="circle" src="files/userprofilepictures/4aad52c2dd60355b937bb744f2edecd9-20180419020057-rumah-zakat-solo_thumbnail72x72.jpg" width="35" alt="">
+                                    </div>
+                                    <div class="media-content">
+                                        <span>Rumah Zakat Solo</span>
+                                        <div>
+                                            <span class="fa fa-star text-orange"></span>
+                                            <span>0</span>
+                                        </div>
+                                    </div>
+                                    <div class="media-location">
+                                        <span>Solo, Solo</span>
+                                    </div>
+                                </div>
+                                                            </div>
+                            <div class="product-card-section">
+                                <div class="flexbox block-half">
+                                    <div class="text-orange text-big text-bold block-quarter">Rp. 100.000
+                                        <span class="text-small color-black"><i class="fa fa-fw fa-user-circle"></i>1 Donatur</span>
+                                    </div>
+                                                                        <div class="meter">
+                                        <div class="meter-bar" data-meter="1"></div>
+                                    </div>
+                                                                        <div class="v-center v-center--spread">
+                                                                                <span class=""><small>1% dari Rp. 15.250.000</small></span>
+                                                                                <span class=""><small><i class="fa fa-fw fa-clock-o"></i>3 Hari</small></span>
+                                    </div>
+                                </div>
+                                <div class="block-quarter product-card-socmed flexbox-center-spread">
+                                    <a href="#" id="donate" class="btn btn--primary popup-program-open-js">Berbagi sekarang</a>
+                                    <a href="program/like/hadirkanmobiljuara.html" data-token="GCendoilzoBHHoJlvqUCAJZgqohsiSPeJGRcwZHX" class="" id="wishlist-desk"><span class="fa fa-fw fa-heart-o" id="like-desk"></span></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-facebook"></span></a>
+                                    <a href="https://twitter.com/home?status=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-twitter"></span></a>
+                                    <a href="whatsapp://send?text=https://sharinghappiness.org/hadirkanmobiljuara" class=""><span class="fa fa-fw fa-whatsapp"></span></a>
+                                </div>
+                            </div>
+                            <div class="product-card-section">
+                                                                <small class="block-half">Bantu program ini dengan menjadi Pembagi kebaikan</small>
+                                <div class="block-quarter">
+                                    <a href="member/login.html" class="btn btn--block btn--tosca">Jadi pembagi kebaikan</a>
+                                </div>
+                                                                <small class="block-half"><span>Program ini mencurigakan?</span> <a href="member/login.html">Laporkan</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <div class="container">
+            <div class="content-push">
+                <div class="text-center">
+                    <h3 class="text-capitalize">Program Terkait</h3>
+                </div>
+                <div class="programs-slider block">
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/2018-03-22-04-04-36-thumb-thumbnail_thumbnail360x_.jpg" alt="Bangun Madrasah Untuk Muslim Kamboja">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Kamboja, Kamboja</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="MadrasahKamboja.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Bangun Madrasah Untuk Muslim Kamboja</span>
+                                    <p class="card-content-intro clamp-js">Kamboja merupakan rumah bagi sebagian minoritas Muslim yang berjumlah kurang dari 5% dari keseluruhan total populasi masyarakat Kamboja. Di Desa Sanprobey, distrik Memot Provinsi Kampong Cham (Tbong Khmom) terdapat Komunitas Muslim Kampong Cham yang tingg</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure ">
+                                                <img class="circle" src="files/userprofilepictures/2018-03-16-12-23-34-phpcacgkh_thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Banana Pirates - IPB</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 42.926.755</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="43"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/50ae2150957f55b13ecc0d8a18bddbef-20180530032245_thumbnail360x_.jpg" alt="Hadirkan Tempat Tinggal Penghafal Quran Bersama Ustadzah Oki Setiana Dewi">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Medan</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="penghafalquranustadzahoki.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Hadirkan Tempat Tinggal Penghafal Quran Bersama Ustadzah Oki Setiana Dewi</span>
+                                    <p class="card-content-intro clamp-js">Maskanul Huffadz adalah lembaga pendidikan Rumah Tahfidz (penghafal Quran) khusus untuk akhwat (muslimah)</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/65e880297e068217df172986ce791364-20180522085332-oki-setiana-dewi-setianadewioki1439-at-gmail..._thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Oki Setiana Dewi</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>1 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 41.203.579</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="8"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/2018-01-22-04-59-53-thumb-bantu%20imam%20shamsi_thumbnail360x_.jpg" alt="Bantu Imam Shamsi Ali Mendirikan Pesantren Di Amerika">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Nasional, Nasional</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="pesantrenamerika.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Bantu Imam Shamsi Ali Mendirikan Pesantren Di Amerika</span>
+                                    <p class="card-content-intro clamp-js">&quot;Kami berusaha untuk membangun sebuah pondok pesantren di Amerika serikat, kenapa pondok pesantren? Ada beberapa alasan, yang pertama pondok pesantren adalah institusi yang memberikan ciri khas Indonesia,&quot; ujar Shamli Ali di Hotel Sultan, Jalan Gatot Subr</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure ">
+                                                <img class="circle" src="files/userprofilepictures/2017-03-27-02-46-14-phpmpysda_thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Imam Shamsi Ali</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 20.676.892</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="1"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/a0941011a98cb7ec8d34830d9bdca849-20180606022745_thumbnail360x_.png" alt="Muliakan Hafidz Al-quran">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Nasional</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="muliakanhafidzquran.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Muliakan Hafidz Al-quran</span>
+                                    <p class="card-content-intro clamp-js">Yuk bantu para santri dalam menghafal Al-quran di Tasikmalaya dan di tempat tempat lainnya.</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/2018-01-18-04-49-11-phptnewao_thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Rumah Wakaf</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 11.214.545</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="2"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/20aab46d4826b5a73077ab39837b6398-20180514080430_thumbnail360x_.jpg" alt="32 Siswa Belajar Dengan Fasilitas Kurang Layak">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Cibeber</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="prasaranaelnajah.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">32 Siswa Belajar Dengan Fasilitas Kurang Layak</span>
+                                    <p class="card-content-intro clamp-js">MI Daar El Najah 2 merupakan madrasah yang didirikan oleh masyarakat Desa Mekarsari bersama beberapa guru yang juga bernaung di bawah yayasan Daar El-Najah Situmekar Cikotok Kecamatan Cibeber.</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/4a55cab5f2ab052b5edb6754cc8208cc-20180417010359-rumah-zakat_thumbnail72x72.png" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Rumah Zakat</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 5.745.954</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="18"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/2018-03-31-08-42-17-thumb-Thumnail_thumbnail360x_.jpg" alt="Selamatkan Generasi Emas Palestina">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Nasional, Nasional</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="SelamatkanGenerasiPalestina.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Selamatkan Generasi Emas Palestina</span>
+                                    <p class="card-content-intro clamp-js">Cerita dari kehidupan kampus - Jalur Gaza
+Blokade yang terjadi di Jalur Gaza selama lebih dari sepuluh tahun telah berkontribusi pada memburuknya kondisi ekonomi dan meningkatnya tingkat kemiskinan. Sudah tentu mencegah ribuan mahasiswa Palestina yang be</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure ">
+                                                <img class="circle" src="files/userprofilepictures/f4c5d5b28265968c850881bdfcd2a9e8-20180629074735-knrp-jawa-barat-knrpjabar-at-gmailcom_thumbnail72x72.png" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>KNRP - Jawa Barat</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>1 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 4.562.291</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="1"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/417db799bbc4b1a80bcf5c1bbe1be541-20180530223514_thumbnail360x_.png" alt="Bangun Pondok Pesantren Hufadz Quran">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Babat Supat, Sungai Lilin</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="PondokPesantrenHufadz.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Bangun Pondok Pesantren Hufadz Quran</span>
+                                    <p class="card-content-intro clamp-js">Yayasan Permata Midad saat ini sedang mendirikan lembaga pendidikan Pondok Pesantren setingkat SLTP dan SLTA yaitu Pondok Pesantren Al-Midad.</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/3c2b775a2c98727ad7c6cfabdddb4047-20180517081123-hadi-yudasta-hadi070187-at-gmailcom_thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Hadi Yudasta</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 3.029.507</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="0"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/4f5eea1c8708025f8cd8884481358809-20180511083757_thumbnail360x_.jpg" alt="Hadirkan Gedung Baru Untuk Mts Miftahul Jannah">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Dedeta, Loloda</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="miftahuljannah.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Hadirkan Gedung Baru Untuk Mts Miftahul Jannah</span>
+                                    <p class="card-content-intro clamp-js">Semenjak didirikan sekitar 5 tahun lalu Mts Miftahul jannah sampai saat ini masih menumpang belajar di gedung SD Negeri Dedeta.</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/4a55cab5f2ab052b5edb6754cc8208cc-20180417010359-rumah-zakat_thumbnail72x72.png" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Rumah Zakat</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 2.502.023</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/95c76c22e446af63efa3281186d2fbee_thumbnail360x_.png" alt="Puluhan Santri Belajar Mengaji Di Kolong Rumah">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Dusun Bollangi Desa Timbuseng Kecamatan Pattalassang Kabupaten Gowa</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="mengajidikolongrumah.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Puluhan Santri Belajar Mengaji Di Kolong Rumah</span>
+                                    <p class="card-content-intro clamp-js">Rumah zakat melalui program Desa Berdaya yang pelaksanaannya dilakukan oleh Relawan Inspirasi hadir di tengah masyarakat menjadi sahabat para pemuda untuk memberikan semangat juga ilmu. Salah satu program yang diinisiasi oleh relawan inspirasi adalah program TK/TPA yang akan segera direalisasikan di tengah masyarakat . Tujuan dari program TK/TPA ini adalah agar mereka yang tinggal di Dusun Bollangi terutama para remaja dapat mengetahui cara membaca Al-quran.</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/2018-01-24-03-50-12-phpkfrqbj_thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Rumah Zakat Makassar</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>13 Hari</small></div>
+                                            <div><small class="text-orange">Rp. 1.418.089</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="7"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                        <div>
+                        <div class="card">
+                            <div class="card-cover">
+                                                            <img class="card-cover-img" src="files/programgalleries/cb2082ae54a76cdffe60bba886a28843-20180531145344_thumbnail360x_.png" alt="Cerdaskan Anak Pesisir Melalui Rumah Baca">
+                                                            <div class="card-cover-info">
+                                    <div class="flex-spread width-block">
+                                        <span class="label">Pendidikan</span>
+                                                                                
+                                    </div>
+                                    <div>
+                                        <small><span class="fa fa-fw fa-map-marker"></span>Desa Iha Kulur, Huamual</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <a href="rumahbacaanakpesisir.html" class="card-box-new-anchor">
+                                    <span class="card-main-anchor">Cerdaskan Anak Pesisir Melalui Rumah Baca</span>
+                                    <p class="card-content-intro clamp-js">Melalui Rumah Baca Inspirasi kami mencoba memberikan yang terbaik untuk negeri</p>
+                                    <div class="card-info">
+                                        <div>
+                                            <div class="card-media media">
+                                                <div class="media-figure media-figure--verified">
+                                                <img class="circle" src="files/userprofilepictures/2ab83616634013a486d44b7d575b8fd9-20180530161932-rumah-inspirasi-rumahinspirasi930-at-gmailco..._thumbnail72x72.jpg" width="35" alt="">
+                                                </div>
+                                                <div class="media-content">
+                                                    <span>Rumah Inspirasi</span>
+                                                    <div>
+                                                        <span class="fa fa-star text-orange"></span>
+                                                        <span>0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right normalize-line-height">
+                                            <div><span class="fa fa-fw fa-clock-o"></span><small>2 Bulan</small></div>
+                                            <div><small class="text-orange">Rp. 1.337.999</small></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                                                        <div class="card-meter meter">
+                                <div class="meter-bar" data-meter="7"></div>
+                            </div>
+                                                    </div>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+        
+        <div class="popup-container popup-program-container-js">
+            <div class="popup-content-container">
+                <a href="#" class="popup-close popup-close-js">&times;</a>
+                <div class="">
+                    <span class="color-dark-grey block-half d-block h3">Kamu akan berdonasi Untuk Program</span>
+                    <div class="flex-img-content block">
+                        <div class="flex-img-content-item">
+                                                            <img src="files/programgalleries/d53b4f291b6ffa27415b05096f38d774-20180525061332.jpg" alt="Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya">
+                                                    </div>
+                        <div class="flex-img-content-item">
+                            <span class="d-block text-bold">Hadirkan Mobil Juara Untuk Anak-anak Di Desa Berdaya</span>
+                            <span class="color-dark-grey"><small><span class="fa fa-fw fa-map-marker"></span>Solo, Solo</small> | <span class="fa fa-fw fa-clock-o"></span><small>3 Hari Hari</small></span>
+                            <span class="d-block color-orange">Rp. 100.000</span>
+                        </div>
+                    </div>
+                    <form method="POST" action="https://sharinghappiness.org/donate/program/hadirkanmobiljuara" accept-charset="UTF-8" class="" data-validate><input name="_token" type="hidden" value="GCendoilzoBHHoJlvqUCAJZgqohsiSPeJGRcwZHX">
+                        <div class="form__row">
+                                                        <p>Anda belum masuk, silahkan <a href="member/login.html">masuk</a> atau berdonasi tanpa masuk terlebih dahulu</p>
+                            <div class="">
+                                <label for="name" class="form-label">Masukkan Nama Anda</label>
+                                <input type="text" id="name" name="name" value="" class="form-input" required>
+                            </div>
+                            <div class="">
+                                <label for="email" class="form-label">Masukkan Email Anda</label>
+                                <input type="email" id="email" name="email" value="" class="form-input" required>
+                            </div>
+                            <div class="">
+                                <label for="phone_number" class="form-label">Masukkan Nomor Handphone Anda</label>
+                                <input type="number" id="phone_number" name="phone_number" value="" class="form-input" required>
+                            </div>
+                                                        <div class="">
+                                <label for="custom_user_name" class="form-label">Masukkan Nama Donatur</label>
+                                <input type="text" id="custom_user_name" name="custom_user_name" class="form-input" value="">
+                            </div>
+                            <div class="">
+                                <input type="checkbox" name="is_anonim">
+                                <label for="is_anonim" id="is_anonim" class="text-small color-dark-grey">Donasi Sebagai Anonim</label>
+                            </div>
+                            <div class="">
+                                <label for="amount" class="form-label">Masukkan Nominal</label>
+                                <input type="text" id="amount" name="amount" min="1000" value="0" class="form-input mask-js" required>
+                            </div>
+                            <div class="info-minimum">
+                                <p class="info-text">Jumlah yang donasi kurang dari Rp. 1.000 sehingga tidak bisa ke proses selanjutnya</p>
+                            </div>
+                        </div>
+                        <div class="form__row">
+                            <div class="form-label">Tuliskan komentar anda</div>
+                            <textarea name="message" id="message" cols="5" rows="5" class="form-input"></textarea>
+                        </div>
+                        <input type="hidden" name="type" id="type">
+                        <div class="popup-btn-container">
+                                                        <button type="submit" id="to-pay" class="btn btn--primary popup-btn --wide">Lanjut Ke Pembayaran</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="alert-box alert-box-success" id="success">
+            <span class="alert-box-text-big"><i class="fa fa-check"></i>Berhasil!</span>
+            <span class="alert-box-text-small" id="success-message">Pesan telah dikirim ke fundraiser</span>
+        </div>
+        <div class="alert-box alert-box-failed" id="failed">
+            <span class="alert-box-text-big"><i class="fa fa-times"></i>Gagal!</span>
+            <span class="alert-box-text-small" id="failed-message">Pesan tidak dapat dikirim ke fundraiser</span>
+        </div>
+        
+    </main>
+        </div>
+        <div class="sticky-footer-container-item">
+            <footer class="site-footer">
+    <section class="footer-section">
+        <div class="container">
+            <form action="https://sharinghappiness.org/newslettersubscribe" method="post" class="site-footer-subscribe" data-validate>
+                <legend>
+                    <b>Kabar berbagi</b>
+                    <span>Temukan Kabar Berbagi di Sharing Happiness</span>
+                </legend>
+                <div class="block-half input">
+                    <input type="hidden" name="_token" value="GCendoilzoBHHoJlvqUCAJZgqohsiSPeJGRcwZHX">
+                    <input class="form-input form-input-custom" id="subscribeName" type="name" name="name" placeholder="Nama" required>
+                </div>
+                <div class="block-half input">
+                    <input class="form-input form-input-custom" id="subscribeEmail" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn--block btn--primary-transparent" type="submit">Langganan</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="footer-section footer-section--grey footer-section-expandable">
+        <div class="container">
+            <div class="site-footer-sections">
+                <div class="site-footer-navs">
+                    <section class="site-footer-nav">
+                        <h4 class="site-footer-expand-js">SharingHappiness.org</h4>
+                        <p>Website donasi online yang memfasilitasi berbagai program sosial dan kemanusiaan agar semakin banyak orang yang bisa berbagi bahagia</p>
+                    </section>
+                                                            <section class="site-footer-nav">
+                        <h4 class="site-footer-expand-js">Kenali Kami</h4>
+                        <ul class="site-footer-nav-list list-nostyle">
+                                                        <li><a href="content/syarat-ketentuan.html">Syarat &amp; Ketentuan</a></li>
+                                                        <li><a href="content/tentangkami.html">Tentang Kami</a></li>
+                                                        <li><a href="content/kebijakan-privasi.html">Kebijakan Privasi</a></li>
+                                                        <li><a href="contactus.html">Hubungi Kami</a></li>
+                                                        <li><a href="content/tim-kami.html">Tim Kami</a></li>
+                                                    </ul>
+                    </section>
+                                        <section class="site-footer-nav">
+                        <h4 class="site-footer-expand-js">Donasi</h4>
+                        <ul class="site-footer-nav-list list-nostyle">
+                                                        <li><a href="content/cara-donasi.html">Cara Donasi</a></li>
+                                                        <li><a href="happiness-story.html">Happiness Story</a></li>
+                                                        <li><a href="faq.html">FAQ</a></li>
+                                                    </ul>
+                    </section>
+                                        <section class="site-footer-nav">
+                        <h4 class="site-footer-expand-js">Program</h4>
+                        <ul class="site-footer-nav-list list-nostyle">
+                                                        <li><a href="program.html">Program</a></li>
+                                                        <li><a href="zakat.html">Zakat</a></li>
+                                                        <li><a href="sedekah/show/fidyah.html">Fidyah</a></li>
+                                                        <li><a href="infaq.html">Infaq</a></li>
+                                                        <li><a href="wakaf.html">Wakaf</a></li>
+                                                        <li><a href="ramadhan.html">Ramadhan</a></li>
+                                                    </ul>
+                    </section>
+                    
+                                        <section class="site-footer-nav">
+                        <h4 class="site-footer-expand-js">Pembayaran</h4>
+                        <div class="">
+                                                                            <img src="files/paymentmethod_pictures/1e45d35a19577a0f2f0cbcdab736b193-20180518075210-transfer-bca-bank-bca-7750325330_thumbnail_x50.png" alt="Transfer BCA" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/7445b5a94e5a272e72c718da7db3602b-20180518074839-transfer-bni-syariah-bank-bni-syariah-233023..._thumbnail_x50.png" alt="Transfer BNI Syariah" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/7aa9c66230692e0fad5bdaf4f432174d-20180518074200-transfer-mandiri-mandiri-1310020012003_thumbnail_x50.png" alt="Transfer Mandiri" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/42eeb9848b2cdaed2231846980e7b161-20180518073253-bri-e-pay_thumbnail_x50.jpg" alt="BRI e-Pay" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/27251537b552b5844c4cd7f9b2a6e12d-20180518073650-doku-wallet_thumbnail_x50.jpg" alt="Doku Wallet" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/d2431db0f45525d1b5c8d0fba9d089d0-20180518075705-ib-muamalat_thumbnail_x50.jpg" alt="IB Muamalat" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/739c0ef6b493011f9964037b2e9372c5-20180518074056-kartu-kredit_thumbnail_x50.png" alt="Kartu Kredit" class="payment-method-footer-logo" />
+                                                                                                    <img src="files/paymentmethod_pictures/32b861d32d68d9624e96dd227f244d1e-20180518075529-mandiri-clickpay_thumbnail_x50.png" alt="Mandiri ClickPay" class="payment-method-footer-logo" />
+                                                                        </div>
+                    </section>
+                                        
+                    <section class="site-footer-nav">
+                                        <h4 class="site-footer-expand-js">Ikuti Kami</h4>
+                        <div class="d-iblock">
+                                                    <a href="https://www.facebook.com/sharinghappiness.org"><span class="fa fa-fw fa-facebook-square"></span></a>
+                                                                            <a href="https://twitter.com/share4happiness"><span class="fa fa-fw fa-twitter"></span></a>
+                                                                            <a href="https://instagram.com/sharinghappinessorg"><span class="fa fa-fw fa-instagram"></span></a>
+                                                                        </div>
+                                <a href="https://play.google.com/store/apps/details?id=org.rumahzakat.sharinghappiness"> <img src="assets/img/playstore-badge.png" alt="Download Sharing Happiness Android Application"></a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="site-footer-copyright">
+                <span>&copy; 2018 Rumah Zakat</span>
+                <span>Sharing Happiness All Reserved Rumah Zakat</span>
+                <span>Jl. Batu Kencana No. 6 - Buah Batu Bandung</span>
+                <span>0227332407</span>
+                <span><a href="cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="cea7a0a8a18ebda6afbca7a0a9a6afbebea7a0abbdbde0a1bca9">[email&#160;protected]</a></span>
+            </div>
+        </div>
+    </section>
+</footer>        </div>
+            </div>
+
+<script data-cfasync="false" src="cdn-cgi/scripts/f2bf09f8/cloudflare-static/email-decode.min.js"></script><script src="../cdn.polyfill.io/v2/polyfill.min7f99.js?features=default,promise,fetch" defer></script>
+    <script src="assets/js/vendor/modernizr.min.js" defer></script>
+    <script src="assets/js/vendor/jquery.min.js"></script>
+    <script src="assets/js/vendor/angular.min.js" ></script>
+    <script src="assets/js/vendor/object-fit-images.min.js" defer></script>
+    <script src="assets/js/vendor/angularPagination.min.js" ></script>
+    <script src="assets/js/vendor/datatables.min.js" ></script>
+    <script src="assets/js/vendor/highcharts.min.js" ></script>
+    <script src="assets/js/vendor/flatpickr.min.js" ></script>
+    <script src="assets/js/vendor/jquery.clamp.min.js"></script>
+    <script src="assets/js/vendor/jquery.countdown.min.js"></script>
+    <script src="assets/js/vendor/sprintf.min.js"></script>
+    <script src="assets/js/vendor/headroom.min.js" ></script>
+    <script src="assets/js/vendor/select2.min.js" ></script>
+    <script src="assets/js/vendor/dropzone.min.js" ></script>
+    <script src="assets/js/vendor/baze.validate.min.js" defer></script>
+    <script src="assets/js/vendor/slick.min.js" defer></script>
+    <script src="assets/js/vendor/clipboard.min.js" ></script>
+    <script src="assets/js/vendor/vanila-masker.min.js" ></script>
+    <script src="assets/js/vendor/sticky.min.js" defer></script>
+    <script src="assets/js/vendor/tinymce.min.js" defer></script>
+    <script src="assets/js/vendor/theme.min.js" defer></script>
+    <script src="assets/js/main.minbb80.js?v=30" defer></script>
+
+    
+            <link rel="manifest" href="manifest.json" />
+        <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <script>
+            var OneSignal = window.OneSignal || [];
+            OneSignal.push(function() {
+                OneSignal.init({
+                    appId: "54adcb53-d7c2-4028-a286-f2f8af1aabdd",
+                });
+                        });
+        </script>
+        <script>
+        $('#search-program').keypress( function(e) {
+            if (e.which == 13 && $(this).val() != '') {
+                var $keyword = $(this).val()
+                window.location.href = 'https://sharinghappiness.org/program?keyword=' + $keyword
+            }
+        })
+    </script>
+            <script>
+        var $info = $('.info-minimum')
+        $info.hide()
+    
+        $('#message-form').submit( function (e) {
+            e.preventDefault();
+            var $url = $(this).attr('action');
+            var $token = $('input[name=_token]')
+            var $sender_fullname = $('#sender_fullname')
+            var $sender_email = $('#sender_email')
+            var $subject = $('#subject')
+            var $content = $('#content')
+
+            $.ajaxSetup({
+                type: 'post',
+                url: $url,
+                cache: false
+            });
+
+            $.ajax({
+                data : {_token : $token.val(), sender_fullname : $sender_fullname.val(), sender_email : $sender_email.val(), subject : $subject.val(), content : $content.val()},
+                success : function (response) {
+                    // console.log(response)
+                    var msg = ''
+                    if (response.code == 20) {
+                        $('.alert-box-success').addClass('is-active')
+                        setTimeout(function () {
+                            $('.alert-box-success').removeClass('is-active')
+                        }, 4500);
+                    } else if (response.code == 30) {
+                        $('.alert-box-failed').addClass('is-active')
+                        setTimeout(function () {
+                            $('.alert-box-failed').removeClass('is-active')
+                        }, 4500);
+                    }
+                }
+            })
+        })
+
+        $('#to-cart').click( function(e) {
+            $('#type').val('cart')
+            validateAmount()
+        })
+
+        $('#to-pay').click( function(e) {
+            $('#type').val('pay')
+            validateAmount()
+        })
+
+        function validateAmount()
+        {
+            var $amount = $('#amount').val()
+            if ($amount < 1000 || $amount == undefined) {
+                $('.popup-btn-container').hide()
+                $info.show()
+                return false
+            } else {
+                $('.popup-btn-container').show()
+                $info.hide()
+                return true
+            }
+        }
+        
+        $('#wishlist-desk').click( function(e) {
+            e.preventDefault()
+            var $link = $(this).attr('href')
+            var $token = $(this).data('token')
+            like($link, $token, 'desk', $(this))
+        })
+
+        $('#wishlist').click( function(e) {
+            e.preventDefault()
+            var $link = $(this).attr('href')
+            var $token = $(this).data('token')
+            like($link, $token, 'mobile', $(this))
+        })
+
+        function like($link, $token, $type, $elem) {
+            var $splitLink = $link.split('index.html')
+            var $slug = $splitLink[$splitLink.length - 1]
+            $.ajaxSetup({
+                type: 'post',
+                url: $link
+            })
+
+            $.ajax({
+                data: {_token: $token},
+                success: function(response) {
+                    if (response.code == 20) {
+                        likeStatus($type)
+                        var $changeUrl = '';
+                        if ($elem.hasClass('liked')) {
+                            $changeUrl = 'program/like.html'
+                            $elem.attr('href', $changeUrl + '/' + $slug)
+                            $elem.removeClass('liked')
+                        } else {
+                            $changeUrl = 'program/unlike.html'
+                            $elem.attr('href', $changeUrl + '/' + $slug)
+                            $elem.addClass('liked')
+                        }
+                    } else {
+                        console.log("jshj")
+                    }
+                }
+            })
+        }
+
+        function likeStatus($type) {
+            if ($type == 'desk') {
+                var $likeEl = $('#like-desk')
+                if ($likeEl.hasClass('fa-heart-o')) {
+                    $likeEl.removeClass('fa-heart-o')
+                    $likeEl.addClass('fa-heart')
+                } else if ($likeEl.hasClass('fa-heart')) {
+                    $likeEl.removeClass('fa-heart')
+                    $likeEl.addClass('fa-heart-o')
+                }
+            } else {
+                var $likeEl = $('#like')
+                if ($likeEl.hasClass('fa-heart-o')) {
+                    $likeEl.removeClass('fa-heart-o')
+                    $likeEl.addClass('fa-heart')
+                } else if ($likeEl.hasClass('fa-heart')) {
+                    $likeEl.removeClass('fa-heart')
+                    $likeEl.addClass('fa-heart-o')
+                }
+            }
+        }
+    </script>
+    <!-- FACEBOOK PIXELS -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      '../connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '529627477198048');
+      fbq('init', '1997855740535171');
+      fbq('init', '1663500033745763');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=529627477198048&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1997855740535171&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1663500033745763&amp;ev=PageView&amp;noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- GOOGLE ANALYTICS -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-72002535-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+        <script>
+        // track view program
+        fbq('track', 'ViewContent');
+
+        // track add to cart
+        function trackFBAddToCart() {
+            fbq('track', 'AddToCart');          
+        };
+        var buttonDonate1 = document.getElementById('donation-button-trigger');
+        buttonDonate1.addEventListener(
+            'click', 
+            trackFBAddToCart,
+            false
+        );
+        var buttonDonate2 = document.getElementById('donate');
+        buttonDonate2.addEventListener(
+            'click', 
+            trackFBAddToCart,
+            false
+        );
+        var buttonDonate3 = document.getElementById('donate-secondary');
+        if (buttonDonate3) {
+            buttonDonate3.addEventListener(
+                'click', 
+                trackFBAddToCart,
+                false
+            );
+        }
+    </script>
+    <script type="text/javascript">
+        var __lc = {};
+        __lc.license = 3532281;
+
+        (function() {
+            var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+            lc.src = ('https:' == document.location.protocol ? 'https://':'http://') + 'cdn.livechatinc.com/tracking.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+        })();
+    </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"abcf286979","applicationID":"149579220","transactionName":"ZgQEZ0BQXEAAWkYKW19OJ1BGWF1dTl9ADFpFBAhXHEFAXAZLUw4aVQQSUltd","queueTime":0,"applicationTime":604,"atts":"SkMHEQhKT04=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
